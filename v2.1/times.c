@@ -1,5 +1,6 @@
 #include "times.h"
 
+#ifdef _WIN32
 int gettimeofday(struct timeval *t, void *timezone)
 {
 	struct _timeb timebuffer;
@@ -8,6 +9,7 @@ int gettimeofday(struct timeval *t, void *timezone)
 	t->tv_usec = 1000 * timebuffer.millitm;
 	return 0;
 }
+#endif
 
 clock_t times(struct tms *__buffer)
 {

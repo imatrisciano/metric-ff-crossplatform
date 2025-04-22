@@ -875,9 +875,9 @@ NAME  name_star
 /* 
  * call	bison -pfct -bscan-fct scan-fct.y
  */
-void fcterr( int errno, char *par ) {
+void fcterr( int err_number, char *par ) {
 
-/*   sact_err = errno; */
+/*   sact_err = err_number; */
 
 /*   if ( sact_err_par ) { */
 /*     free( sact_err_par ); */
